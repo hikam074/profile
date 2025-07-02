@@ -1,0 +1,12 @@
+/* Komponen custom */
+
+.navbar-li {
+  @apply hover:bg-blue-600 hover:text-white py-2 px-4;
+}
+
+.teks-judul{
+    @apply text-center text-4xl font-bold pt-8;
+}
+.teks-subjudul{
+    @apply text-center text-base font-extralight pb-8;
+}
