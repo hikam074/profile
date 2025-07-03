@@ -17,7 +17,7 @@ const projects = [
         year: "2025",
         image: imgNauture,
         technologies: ["Laravel", "TailwindCSS", "Vite", "Midtrans", "RajaOngkir", "Onesignal", "Fonnte"],
-        category: "web fullstacks",
+        category: "Web Fullstacks",
         link: "https://github.com/hikam074/nauture",
     },
     {
@@ -26,16 +26,16 @@ const projects = [
         year: "2022-2025",
         image: imgAthemasmasa,
         technologies: ["HTML", "CSS", "JS"],
-        category: "web frontend",
+        category: "Web Frontend",
         link: "https://github.com/athemasmasa/athemasmasa.com",
     },
     {
         title: "Website Profil Pribadi",
-        description: "Website statis profil saya. Berisi berbagai proyek, karya dan infromasi mengenai saya",
+        description: "Website statis profil saya. Berisi berbagai proyek, karya dan informasi mengenai saya",
         year: "2025",
         image: imgWebProfil,
         technologies: ["React", "CSS", "JS", "TailwindCSS", "Vite"],
-        category: "web frontend",
+        category: "Web Frontend",
         link: "https://profile-virid-pi.vercel.app/",
     },    
     {
@@ -44,7 +44,7 @@ const projects = [
         year: "2024",
         image: imgBarbermate,
         technologies: ["C#", "PostgreSQL"],
-        category: "desktop app",
+        category: "Desktop App",
         link: "https://github.com/hikam074/PBOBarberMate",
     },
     {
@@ -53,7 +53,7 @@ const projects = [
         year: "2024",
         image: imgSatset,
         technologies: ["Python", "PostgreSQL"],
-        category: "cli app",
+        category: "CLI App",
         link: "https://github.com/hikam074/basda_sisforklinikhewan",
     },
     {
@@ -62,7 +62,7 @@ const projects = [
         year: "2023-2025",
         image: imgIgAthema,
         technologies: ["Instagram", "Canva"],
-        category: "design",
+        category: "Design",
         link: "https://www.instagram.com/athema.smasa/",
     },
     {
@@ -71,7 +71,7 @@ const projects = [
         year: "2024",
         image: imgUpsence2,
         technologies: ["Python"],
-        category: "cli app",
+        category: "CLI App",
         link: "https://github.com/hikam074/algo2_upsence-programpresensi",
     },
     {
@@ -80,7 +80,7 @@ const projects = [
         year: "2021-2022",
         image: imgIgPasisma,
         technologies: ["Instagram", "Canva"],
-        category: "design",
+        category: "Design",
         link: "https://www.instagram.com/pasismasa/",
     },
     {
@@ -89,7 +89,7 @@ const projects = [
         year: "2024-2025",
         image: imgYtAlazhar,
         technologies: ["Youtube"],
-        category: "cli app",
+        category: "Design",
         link: "https://github.com/hikam074/algo1_upsence-programpresensi",
     },    
     {
@@ -98,7 +98,7 @@ const projects = [
         year: "2021-2023",
         image: imgYtPasisma,
         technologies: ["Youtube"],
-        category: "cli app",
+        category: "Design",
         link: "https://github.com/hikam074/algo1_upsence-programpresensi",
     },  
     {
@@ -107,7 +107,7 @@ const projects = [
         year: "2023",
         image: imgUpsence1,
         technologies: ["Python"],
-        category: "cli app",
+        category: "CLI App",
         link: "https://github.com/hikam074/algo1_upsence-programpresensi",
     },  
 ];

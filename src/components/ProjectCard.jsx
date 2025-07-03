@@ -1,20 +1,20 @@
 import React from 'react';
 import techBadges from '../data/techBadges';
 import iconCode from '../assets/icons/icon-code.svg';
-import HoverZoomImage from './HoverZoomImage';
+import HoverZoomImage from './utils/HoverZoomImage';
 
 export default function ProjectCard({ title, description, year, image, technologies, category, link }) {
     const categoryColors = {
-        design: "bg-red-100",
-        "cli app": "bg-gray-100",
-        "desktop app": "bg-purple-100",
-        "web fullstacks": "bg-blue-100",
-        "web frontend": "bg-green-100",
+        "Design": "bg-red-200",
+        "CLI App": "bg-gray-200",
+        "Desktop App": "bg-purple-200",
+        "Web Fullstacks": "bg-blue-200",
+        "Web Frontend": "bg-green-200",
         default: "bg-white"
         };
 
-    return (
-        <div className='bg-white p-4 rounded-lg shadow flex flex-col justify-between border gap-2
+    return ( 
+        <div className='bg-white p-4 rounded-lg shadow flex flex-col justify-between border gap-2 h-full
             hover:shadow-xl hover:scale-105 transition-all ease-in-out duration-300'
             >
             <div className='flex flex-col gap-2'>
@@ -25,12 +25,12 @@ export default function ProjectCard({ title, description, year, image, technolog
                 <div className='flex flex-col gap-2'>
                     <h3 className='font-bold text-xl'>{title}</h3>
                     <div className="flex items-center gap-2 mb-1">
-                        <span className='text-[10px] font-semibold px-2 py-1 rounded-full shadow  text-gray-800' >
+                        <span className='text-[10px] font-semibold px-2 py-1 rounded-full shadow border  text-gray-800' >
                             {year}
                         </span>
                         {category && (
                             <span
-                            className={`text-[10px] font-semibold px-2 py-1 rounded-full shadow ${categoryColors[category] || categoryColors.default} text-gray-800 capitalize`}
+                            className={`text-[10px] font-semibold px-2 py-1 rounded-full shadow border ${categoryColors[category] || categoryColors.default} text-gray-800 capitalize`}
                             >
                             {category}
                             </span>)}

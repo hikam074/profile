@@ -14,7 +14,7 @@ export default function RecentRepos({ username = "hikam074", count = 5 }) {
     <section className="">
         <div className='flex justify-between items-baseline'>
             <h2 className="text-xl font-bold mb-4">Repositori Terbaru</h2>
-            <a href="https://github.com/hikam074" target="_blank" rel="noopener noreferrer" className='inline-block text-blue-600 text-sm hover:underline'>Lihat Lebih Banyak → </a>
+            <a href="https://github.com/hikam074" target="_blank" rel="noopener noreferrer" className='inline-block text-right text-blue-600 text-sm hover:underline'>Lihat Lebih Banyak → </a>
         </div>
       <ul className="space-y-3">
         {repos.map((repo) => (

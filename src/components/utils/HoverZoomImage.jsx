@@ -1,4 +1,3 @@
-// src/components/HoverZoomImage.jsx
 import React, { useRef, useState } from 'react';
 
 export default function HoverZoomImage({ src, alt, className = '', zoom = 2.0 }) {
