@@ -2,6 +2,7 @@ import contacts from "../data/contacts";
 import ContactCard from "./ContactCard";
 import TypingAnimate from "./utils/TypingAnimate";
 import LazyReveal from "./utils/LazyReveal";
+import FotoProfil from '../assets/pp-half.png';
 
 export default function TitleHome() {
     return (
@@ -23,7 +24,7 @@ export default function TitleHome() {
                 </LazyReveal>
             </div>
             <div className="max-w-[500px] min-w-[350px]">
-                <img src="/src/assets/pp-half.png" className="object-cover" />
+                <img src={FotoProfil} className="object-cover" />
             </div>
         </LazyReveal>
     );
