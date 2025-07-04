@@ -36,7 +36,7 @@ const projects = [
         image: imgWebProfil,
         technologies: ["React", "CSS", "JS", "TailwindCSS", "Vite"],
         category: "Web Frontend",
-        link: "https://profile-virid-pi.vercel.app/",
+        link: "https://hikam-profile.vercel.app/",
     },
         {
         title: "InnoVixus : Sistem Informasi Manajemen Stok Toko Berbasis FIFO (first-in-first-out)",
