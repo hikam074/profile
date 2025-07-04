@@ -23,7 +23,7 @@ export default function TitleHome() {
                 </LazyReveal>
             </div>
             <div className="max-w-[500px] min-w-[350px]">
-                <img src="./src/assets/pp-half.png" className="object-cover" />
+                <img src="/src/assets/pp-half.png" className="object-cover" />
             </div>
         </LazyReveal>
     );
