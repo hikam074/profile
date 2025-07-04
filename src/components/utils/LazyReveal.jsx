@@ -18,9 +18,9 @@ import { useInView } from 'react-intersection-observer';
 export default function LazyReveal({
   children,
   direction = 'left',
-  duration = 0.5,
+  duration = 0.3,
   stagger,
-  triggerOnce = true,
+  triggerOnce = false,
   threshold = 0.1,
   className = '',
 }) {

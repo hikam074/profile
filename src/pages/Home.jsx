@@ -11,12 +11,14 @@ export default function Home() {
   const featured = projects.slice(0, 3); // Ambil berapa projek pertama
 
   return (
-    <section className="p-6 gap-4 flex flex-col">
-        <TitleHome />
+    <section className="px-6 gap-4 flex flex-col">
+        <TitleHome />   
+        <div>---NAVBAR LENGKAPIN---</div>
+        <div>---UBAH BG SEJAK INI---</div>
         <LazyReveal direction='up'>
         <div className='p-6 border shadow-xl rounded bg-white'>
             <div className='flex justify-between mx-6 items-baseline'>
-                <h2 className="text-2xl font-bold mb-6">Proyek Unggulan</h2>
+                <h2 className="text-2xl font-bold mb-6">ProyekKu</h2>
                 <Link to="/portfolio" className="inline-block text-blue-600 text-right text-sm hover:underline" >
                     Lihat Semua Proyek →
                 </Link>
@@ -28,6 +30,9 @@ export default function Home() {
             </GridReveal>
         </div>
         </LazyReveal>
+        <div>---SKILLS---</div>
+        <div>---EXPERIENCE---</div>
+        <div>---CERTIFICATE---</div>
         <LazyReveal direction='up'>
         <div className='bg-white p-6 rounded shadow-lg border flex flex-col gap-8 lg:flex-row'> 
             <GithubCalendarSection />

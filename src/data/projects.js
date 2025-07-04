@@ -16,18 +16,18 @@ const projects = [
         description: "Aplikasi lelang hasil pertanian berbasis website. Lengkap dengan mekanisme lelang, manajemen serta laporan hingga keuangan",
         year: "2025",
         image: imgNauture,
-        technologies: ["Laravel", "TailwindCSS", "Vite", "Midtrans", "RajaOngkir", "Onesignal", "Fonnte"],
-        category: "Web Fullstacks",
+        technologies: ["Laravel", "PHP", "HTML", "CSS", "JS", "TailwindCSS", "Vite", "SweetAlert2", "Toastr", "ChartJS", "AnimeJS", "Midtrans", "RajaOngkir", "Onesignal", "Fonnte", "DomPDF"],
+        category: "Web Fullstack",
         link: "https://github.com/hikam074/nauture",
     },
     {
-        title: "AthemaSmasa : Website Profil Kelas MIPA 5 SMAN 1 JEMBER",
+        title: "Athemasmasa : Website Profil Kelas MIPA 5 SMAN 1 JEMBER",
         description: "Website statis profil kelas 10-12 MIPA 5 SMA Negeri 1 Jember lulusan 2023. Mulai dari profil anggota, galeri kelas, dan masih banyak lagi",
         year: "2022-2025",
         image: imgAthemasmasa,
         technologies: ["HTML", "CSS", "JS"],
         category: "Web Frontend",
-        link: "https://github.com/athemasmasa/athemasmasa.com",
+        link: "https://athemasmasa.github.io/athemasmasa.com/",
     },
     {
         title: "Website Profil Pribadi",
@@ -37,6 +37,15 @@ const projects = [
         technologies: ["React", "CSS", "JS", "TailwindCSS", "Vite"],
         category: "Web Frontend",
         link: "https://profile-virid-pi.vercel.app/",
+    },
+        {
+        title: "InnoVixus : Sistem Informasi Manajemen Stok Toko Berbasis FIFO (first-in-first-out)",
+        description: "Aplikasi web untuk manajemen toko dan stok dengan sistem FIFO. Termasuk grafik penjualan, rangkuman toko, pengelolaan stok, dan ekspor laporan ke PDF dengan sekali klik.",
+        year: "2025",
+        image: imgWebProfil,
+        technologies: ["HTML", "CSS", "JS", "TailwindCSS", "Vite", "ChartJS", "DomPDF"],
+        category: "Web Fullstack",
+        link: "https://github.com/ChieJuwonsFx/Belajar-PWEB",
     },    
     {
         title: "BarberMate : Sistem Informasi Barber Shop",
@@ -57,15 +66,6 @@ const projects = [
         link: "https://github.com/hikam074/basda_sisforklinikhewan",
     },
     {
-        title: "Athema Smasa - Instagram",
-        description: "Konten kreator dari instagram @athema.smasa",
-        year: "2023-2025",
-        image: imgIgAthema,
-        technologies: ["Instagram", "Canva"],
-        category: "Design",
-        link: "https://www.instagram.com/athema.smasa/",
-    },
-    {
         title: "Upsence 2.0 : Program Presensi Digital & Manajemen Karyawan",
         description: "Aplikasi Konsol (CLI) lanjutan dari Upsence 1.0. Menambahkan fitur penggajian, analitik kehadiran menggunakan grafik dan algoritma khusus seperti merge sort dst.",
         year: "2024",
@@ -73,6 +73,24 @@ const projects = [
         technologies: ["Python"],
         category: "CLI App",
         link: "https://github.com/hikam074/algo2_upsence-programpresensi",
+    },
+    {
+        title: "Upsence 1.0 : Program Presensi Digital",
+        description: "Aplikasi Konsol (CLI) manajemen presensi karyawan. Dapat menyusun shift, melakukan presensi, hingga otomatis menangani karyawan yang tidak hadir",
+        year: "2023",
+        image: imgUpsence1,
+        technologies: ["Python"],
+        category: "CLI App",
+        link: "https://github.com/hikam074/algo1_upsence-programpresensi",
+    },  
+    {
+        title: "Athema Smasa - Instagram",
+        description: "Konten kreator dari instagram @athema.smasa",
+        year: "2023-2025",
+        image: imgIgAthema,
+        technologies: ["Instagram", "Canva"],
+        category: "Design",
+        link: "https://www.instagram.com/athema.smasa/",
     },
     {
         title: "Pasisma Smasa - Instagram",
@@ -90,7 +108,7 @@ const projects = [
         image: imgYtAlazhar,
         technologies: ["Youtube"],
         category: "Design",
-        link: "https://github.com/hikam074/algo1_upsence-programpresensi",
+        link: "https://www.youtube.com/@ukmki.al-azhar",
     },    
     {
         title: "Pasisma Smasa - YouTube",
@@ -99,17 +117,9 @@ const projects = [
         image: imgYtPasisma,
         technologies: ["Youtube"],
         category: "Design",
-        link: "https://github.com/hikam074/algo1_upsence-programpresensi",
+        link: "https://www.youtube.com/@pasismasa",
     },  
-    {
-        title: "Upsence 1.0 : Program Presensi Digital",
-        description: "Aplikasi Konsol (CLI) manajemen presensi karyawan. Dapat menyusun shift, melakukan presensi, hingga otomatis menangani karyawan yang tidak hadir",
-        year: "2023",
-        image: imgUpsence1,
-        technologies: ["Python"],
-        category: "CLI App",
-        link: "https://github.com/hikam074/algo1_upsence-programpresensi",
-    },  
+
 ];
 
 export default projects;

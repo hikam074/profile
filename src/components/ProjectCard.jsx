@@ -8,7 +8,7 @@ export default function ProjectCard({ title, description, year, image, technolog
         "Design": "bg-red-200",
         "CLI App": "bg-gray-200",
         "Desktop App": "bg-purple-200",
-        "Web Fullstacks": "bg-blue-200",
+        "Web Fullstack": "bg-blue-200",
         "Web Frontend": "bg-green-200",
         default: "bg-white"
         };
@@ -23,7 +23,7 @@ export default function ProjectCard({ title, description, year, image, technolog
                     className="h-48 p-1 border border-dashed border-tersier"
                 />)}
                 <div className='flex flex-col gap-2'>
-                    <h3 className='font-bold text-xl'>{title}</h3>
+                    <h3 className='font-bold text-xl text-primer'>{title}</h3>
                     <div className="flex items-center gap-2 mb-1">
                         <span className='text-[10px] font-semibold px-2 py-1 rounded-full shadow border  text-gray-800' >
                             {year}
@@ -53,7 +53,7 @@ export default function ProjectCard({ title, description, year, image, technolog
             </div>
             {link && (
             <a href={link} target="_blank" rel="noopener noreferrer"
-                className="w-full flex gap-1 justify-center px-2 py-1 bg-sekunderDark hover:bg-primer rounded
+                className="w-full flex gap-1 justify-center px-2 py-1 bg-sekunder hover:bg-sekunderDark rounded
                     text-center text-white text-sm"
                 >
                 <img src={iconCode} className='h-5'/> Lihat Disini

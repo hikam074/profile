@@ -19,8 +19,8 @@ export default function Navbar() {
               to={route.to}
               end={route.to === '/'}
               className={({ isActive }) =>
-                `px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-                  isActive ? 'text-primer' : 'text-gray-600 hover:text-primer'
+                `px-4 py-2 text-md font-bold border-b border-transparent transition duration-300 ${
+                  isActive ? 'text-primer' : 'text-sekunder hover:text-primer hover:border-b-2 hover:border-primer hover:scale-105'
                 }`
               }
             >
@@ -28,7 +28,7 @@ export default function Navbar() {
               {location.pathname === route.to && (
                 <motion.div
                   layoutId="nav-underline"
-                  className="absolute left-0 -bottom-1 h-[2px] w-full bg-primer"
+                  className="absolute left-0 -bottom-2 h-0.5 w-full bg-primer"
                   transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 />
               )}
