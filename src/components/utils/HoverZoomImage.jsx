@@ -7,17 +7,20 @@ export default function HoverZoomImage({
   zoom = 2.0,
   imgClass = '',
   style = {},
+  longPressDelay = 300, // waktu menahan jari sebelum aktif zoom
 }) {
   const containerRef = useRef(null);
   const [origin, setOrigin] = useState('center center');
   const [isHovered, setIsHovered] = useState(false);
+  const touchTimeout = useRef(null);
 
-  const isTouchDevice = typeof window !== 'undefined' && (
-    'ontouchstart' in window || navigator.maxTouchPoints > 0
-  );
+  const isTouchDevice =
+    typeof window !== 'undefined' &&
+    ('ontouchstart' in window || navigator.maxTouchPoints > 0);
 
   const handleMouseMove = (e) => {
     if (!containerRef.current || isTouchDevice) return;
+
     const rect = containerRef.current.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
@@ -30,11 +33,36 @@ export default function HoverZoomImage({
     setIsHovered(false);
   };
 
+  const handleTouchStart = (e) => {
+    if (!containerRef.current) return;
+
+    // Set posisi zoom ke tengah atau ke titik sentuh
+    const rect = containerRef.current.getBoundingClientRect();
+    const touch = e.touches[0];
+    const x = ((touch.clientX - rect.left) / rect.width) * 100;
+    const y = ((touch.clientY - rect.top) / rect.height) * 100;
+    setOrigin(`${x}% ${y}%`);
+
+    // Set timer untuk long press
+    touchTimeout.current = setTimeout(() => {
+      setIsHovered(true);
+    }, longPressDelay);
+  };
+
+  const handleTouchEnd = () => {
+    clearTimeout(touchTimeout.current);
+    setIsHovered(false);
+    setOrigin('center center');
+  };
+
   return (
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchEnd}
       className={`overflow-hidden ${className}`}
       style={style}
     >
