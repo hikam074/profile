@@ -66,14 +66,15 @@ export default function HoverZoomImage({
       className={`overflow-hidden ${className}`}
       style={style}
     >
-      <img
+      <div
         src={src}
         alt={alt}
         loading="lazy"
-        className={`w-full h-full object-cover object-left-top transition-transform duration-300 ${imgClass}`}
+        className={`w-full h-full bg-no-repeat bg-contain bg-center select-none pointer-events-none transition-transform duration-300 ${imgClass}`}
         style={{
           transform: `scale(${isHovered ? zoom : 1})`,
           transformOrigin: origin,
+          backgroundImage: `url(${src})`,
         }}
       />
     </div>
