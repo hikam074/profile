@@ -19,37 +19,49 @@ export default function ProjectCard({ title, description, year, image, technolog
             >
             <div className='flex flex-col gap-2'>
                 {image && (
-                <HoverZoomImage src={image} alt={title} loading="lazy"
-                    className="h-48 p-1 border border-dashed border-tersier"
-                />)}
+                    <div
+                    onTouchStart={(e) => e.preventDefault()}
+                    className="select-none"
+                    >
+                    <HoverZoomImage
+                        src={image}
+                        alt={title}
+                        loading="lazy"
+                        className="h-48 p-1 border border-dashed border-tersier"
+                    />
+                    </div>
+                )}
+
                 <div className='flex flex-col gap-2'>
                     <h3 className='font-bold text-xl text-primer'>{title}</h3>
                     <div className="flex items-center gap-2 mb-1">
-                        <span className='text-[10px] font-semibold px-2 py-1 rounded-full shadow border  text-gray-800' >
-                            {year}
+                    <span className='text-[10px] font-semibold px-2 py-1 rounded-full shadow border text-gray-800'>
+                        {year}
+                    </span>
+                    {category && (
+                        <span className={`text-[10px] font-semibold px-2 py-1 rounded-full shadow border ${categoryColors[category] || categoryColors.default} text-gray-800 capitalize`}>
+                        {category}
                         </span>
-                        {category && (
-                            <span
-                            className={`text-[10px] font-semibold px-2 py-1 rounded-full shadow border ${categoryColors[category] || categoryColors.default} text-gray-800 capitalize`}
-                            >
-                            {category}
-                            </span>)}
+                    )}
                     </div>
                     <p className='text-sm font-light'>{description}</p>
+
+                    {technologies && (
                     <div className='py-1'>
-                        {technologies && (
                         <div className="flex flex-wrap gap-2">
-                            {technologies.map((tech, index) => (
+                        {technologies.map((tech, index) => (
                             <img
-                                key={index}
-                                alt={tech}
-                                src={techBadges[tech] || techBadges.default}
-                                className="inline-block h-5"
-                                title={tech}
-                                loading="lazy"
-                            />))}
-                        </div>)}
+                            key={index}
+                            alt={tech}
+                            src={techBadges[tech] || techBadges.default}
+                            className="inline-block h-5"
+                            title={tech}
+                            loading="lazy"
+                            />
+                        ))}
+                        </div>
                     </div>
+                    )}
                 </div>
             </div>
             {link && (
