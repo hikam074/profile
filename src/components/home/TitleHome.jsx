@@ -1,8 +1,8 @@
-import contacts from "../data/contacts";
+import contacts from "../../data/contacts";
 import ContactCard from "./ContactCard";
-import TypingAnimate from "./utils/TypingAnimate";
-import LazyReveal from "./utils/LazyReveal";
-import FotoProfil from '../assets/pp-half.png';
+import TypingAnimate from "../utils/TypingAnimate";
+import LazyReveal from "../utils/LazyReveal";
+import FotoProfil from '/src/assets/pp-half.png';
 
 export default function TitleHome() {
     return (
@@ -15,7 +15,7 @@ export default function TitleHome() {
                         <h1 className="text-5xl font-bold">Hai! Saya Seorang</h1>
                         <h1 className="text-5xl font-bold"><TypingAnimate kalimat={['Website Developer', 'Asisten Praktikum Lab RPL', 'Pengurus Divisi Syiar UKM-KI Al-Azhar']} /></h1>
                     </LazyReveal>
-                    <span className="font-light">Hai! Nama saya Mohammad Al Hikam, atau panggil saja Hikam 👋 Mahasiswa jurusan Sistem Informasi yang memiliki minat dan kemampuan di bidang perencanaan hingga pengembangan website</span>
+                    <span className="font-light">Hai! Nama saya Mohammad Al Hikam, atau panggil saja Hikam 👋 Mahasiswa jurusan <a href="https://ilkom.unej.ac.id/sistem-informasi/" target="_blank" className="text-sekunder">Sistem Informasi</a> yang memiliki minat dan kemampuan di bidang perencanaan hingga pengembangan website</span>
                     <div className="flex gap-4">
                         {contacts.map((contact, index) => (
                             <ContactCard key={index} {...contact} />

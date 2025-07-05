@@ -3,17 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 /**
- * LazyReveal
- * -------------
- * Wrapper component that reveals its children with a staggered animation when scrolled into view.
- *
- * Props:
- *  - direction  : 'left' | 'right' | 'up' | 'down' | 'fade' (default 'left')
- *  - duration   : time (seconds) for each item's animation (default 0.5)
- *  - stagger    : delay between items (seconds). Default = duration (sequential)
- *  - triggerOnce: boolean (default true) – reveal only the first time in view
- *  - threshold  : Intersection‑Observer threshold (default 0.1)
- *  - className  : custom classes for the container
+ *  - asChild : boolean – kalau true, children[0] jadi elemen animasi (tanpa wrapper extra)
+ *  - useContents: boolean – kalau true, wrapper memakai display:contents (box hilang)
  */
 export default function LazyReveal({
   children,
@@ -23,44 +14,43 @@ export default function LazyReveal({
   triggerOnce = false,
   threshold = 0.1,
   className = '',
+  asChild = false,
+  useContents = false,
 }) {
-  // If stagger not provided, use duration so each item starts when previous ends
+  const offsets = {
+    left:  { x: -40, y: 0 },
+    right: { x: 40,  y: 0 },
+    up:    { x: 0,   y: 40 },
+    down:  { x: 0,   y: -40 },
+    fade:  { x: 0,   y: 0 },
+  };
+  const offset = offsets[direction] || offsets.left;
   const staggerDelay = stagger ?? duration;
 
-  // Offset map for initial position
-  const offsets = {
-    left: { x: -40, y: 0 },
-    right: { x: 40, y: 0 },
-    up: { x: 0, y: 40 },
-    down: { x: 0, y: -40 },
-    fade: { x: 0, y: 0 },
-  };
-
-  const offset = offsets[direction] || offsets.left;
-
-  // Variants for container & items
   const containerVariants = {
     hidden: {},
-    show: {
-      transition: {
-        staggerChildren: staggerDelay,
-        staggerDirection: 1, // left‑to‑right / top‑to‑bottom order
-      },
-    },
+    show:   { transition: { staggerChildren: staggerDelay, staggerDirection: 1 } },
   };
-
   const itemVariants = {
     hidden: { opacity: 0, ...offset },
-    show: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      transition: { duration, ease: 'easeOut' },
-    },
+    show:   { opacity: 1, x: 0, y: 0, transition: { duration, ease: 'easeOut' } },
   };
 
-  // Intersection Observer to detect when component enters viewport
   const { ref, inView } = useInView({ triggerOnce, threshold });
+
+  if (asChild) {
+    const first = React.Children.only(children);
+    return (
+      <motion.div
+        ref={ref}
+        variants={itemVariants}
+        initial="hidden"
+        animate={inView ? 'show' : 'hidden'}
+      >
+        {first}
+      </motion.div>
+    );
+  }
 
   return (
     <motion.div
@@ -69,9 +59,10 @@ export default function LazyReveal({
       initial="hidden"
       animate={inView ? 'show' : 'hidden'}
       className={className}
+      style={useContents ? { display: 'contents' } : undefined}
     >
-      {React.Children.map(children, (child, index) => (
-        <motion.div key={index} variants={itemVariants}>
+      {React.Children.map(children, (child, idx) => (
+        <motion.div key={idx} variants={itemVariants}>
           {child}
         </motion.div>
       ))}

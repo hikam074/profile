@@ -16,7 +16,7 @@ function App() {
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes>
-          <Route path="/" element={ <PageTransitionWrap> <Home /> </PageTransitionWrap> } />
+          <Route path="/" element={ <PageTransitionWrap bg="#CEEDB2"> <Home /> </PageTransitionWrap> } />
           <Route path="/portfolio" element={<PageTransitionWrap bg="#BEE0C7"> <Portfolio /> </PageTransitionWrap> } />
           <Route path="/contact" element={<PageTransitionWrap bg="#CEEDB2"> <Contact /> </PageTransitionWrap> } />
         </Routes>

@@ -1,4 +1,4 @@
-import LazyReveal from "./utils/LazyReveal";
+import LazyReveal from "../utils/LazyReveal";
 
 export default function TitlePortfolio() {
     return (

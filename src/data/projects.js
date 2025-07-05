@@ -1,14 +1,14 @@
-import imgNauture from '../assets/porto/porto-nauture.png';
-import imgAthemasmasa from '../assets/porto/porto-athemasmasa.png';
-import imgBarbermate from '../assets/porto/porto-barbermate.png';
-import imgWebProfil from '../assets/porto/porto-profil.png';
-import imgSatset from '../assets/porto/porto-satset.png';
-import imgUpsence1 from '../assets/porto/porto-upsence1.png';
-import imgUpsence2 from '../assets/porto/porto-upsence2.png';
-import imgIgAthema from '../assets/porto/porto-ig_athema.png';
-import imgIgPasisma from '../assets/porto/porto-ig_pasisma.png';
-import imgYtPasisma from '../assets/porto/porto-yt_pasisma.png';
-import imgYtAlazhar from '../assets/porto/porto-yt_alazhar.png';
+import imgNauture from '../assets/portos/porto-nauture.png';
+import imgAthemasmasa from '../assets/portos/porto-athemasmasa.png';
+import imgBarbermate from '../assets/portos/porto-barbermate.png';
+import imgWebProfil from '../assets/portos/porto-profil.png';
+import imgSatset from '../assets/portos/porto-satset.png';
+import imgUpsence1 from '../assets/portos/porto-upsence1.png';
+import imgUpsence2 from '../assets/portos/porto-upsence2.png';
+import imgIgAthema from '../assets/portos/porto-ig_athema.png';
+import imgIgPasisma from '../assets/portos/porto-ig_pasisma.png';
+import imgYtPasisma from '../assets/portos/porto-yt_pasisma.png';
+import imgYtAlazhar from '../assets/portos/porto-yt_alazhar.png';
 
 const projects = [
     {

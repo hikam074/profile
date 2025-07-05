@@ -54,7 +54,7 @@ export default function GridReveal({
       {rows.map((row, i) => (
         <LazyReveal
           key={i}
-          className={`grid ${gridClassName} gap-6 mb-6`}
+          className={`grid ${gridClassName} ${rowGap}`}
           duration={duration}
           stagger={effectiveStagger}
           {...revealProps}
