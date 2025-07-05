@@ -57,7 +57,7 @@ export default function Portfolio() {
     <section className='p-6'>
       <TitlePortfolio />
 
-      <LazyReveal direction='up' duration={0.6} className="w-full flex justify-center mb-6 text-xs">
+      <LazyReveal direction='up' duration={0.6} triggerOnce={true} className="w-full flex justify-center mb-6 text-xs">
         <div className="flex flex-col items-center gap-4 p-2 bg-white rounded-xl shadow border
           sm:flex-row
           ">
@@ -96,7 +96,7 @@ export default function Portfolio() {
 
       <GridReveal
         gridClassName="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-stretch"
-        direction="up" duration={0.6} stagger={0.2} rowGap="gap-6" sequential="false"
+        direction="up" duration={0.6} stagger={0.2} rowGap="gap-6" sequential="false" triggerOnce={true}
         className="px-6"
       >
         {projekFiltered.length > 0 ? (

@@ -15,7 +15,7 @@ import skillsPropImg from '/prop-skills.png';
 
 export default function Home() {
   const featured = projects.slice(0, 3); // Ambil berapa projek pertama
-  const { ref, bg } = useDynamicBgScroll( {colorIn: 'bg-white', colorOut: 'bg-bsoft', threshold: 0.7} );
+  const { ref, bg } = useDynamicBgScroll( {colorIn: 'bg-white', colorOut: 'bg-bsoft', threshold: 0.5} );
   useSmartScroll();
 
   return (
@@ -23,7 +23,7 @@ export default function Home() {
 
         <section ref={ref}><TitleHome /> </section>
 
-        <LazyReveal direction='up'>
+        <LazyReveal direction='up' triggerOnce={true}>
             <section id='projek' className='p-6 border shadow-xl rounded bg-white'>
                 <div className='flex justify-between mx-6 gap-6 items-center'>
                     <h3 className="text-4xl font-bold mb-6">Some of My Portfolio</h3>
@@ -38,8 +38,8 @@ export default function Home() {
                 </GridReveal>
             </section>
         </LazyReveal>
-        
-        <LazyReveal asChild >
+
+        <LazyReveal asChild triggerOnce={true} >
             <section className='flex flex-col justify-center bg-white p-6 border rounded shadow-xl items-center w-full
                 lg:flex-row lg:justify-between lg:border-l-4 lg:space-x-40 lg:border-l-sekunderDark'
                 >
@@ -66,7 +66,7 @@ export default function Home() {
 
         <div>---CERTIFICATE---</div>
 
-        <LazyReveal direction='up'>
+        <LazyReveal direction='up' triggerOnce={true}>
             <div className='bg-white p-6 rounded shadow-lg border flex flex-col gap-8 lg:flex-row'> 
                 <GithubCalendarSection />
                 <RecentRepos username="hikam074" count={3} />

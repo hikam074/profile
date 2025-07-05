@@ -21,7 +21,10 @@ export function useSmartScroll(options = { behavior: 'smooth', block: 'start' })
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'auto' });
         if (hash) {
-            requestAnimationFrame(() => scrollToId(hash, options));
+            const delay = setTimeout(() => {
+                scrollToId(hash, options)
+            }, 500);
+            return () =>clearTimeout(delay);
         }
     }, [pathname, hash]);
 }

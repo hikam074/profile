@@ -6,12 +6,12 @@ import FotoProfil from '/src/assets/pp-half.png';
 
 export default function TitleHome() {
     return (
-        <LazyReveal duration={0.6} stagger={0.4} threshold={0.3} className="px-6 min-h-[70vh] flex flex-col-reverse items-center gap-10
+        <LazyReveal duration={0.6} stagger={0.4} threshold={0.3} triggerOnce={true} className="px-6 min-h-[70vh] flex flex-col-reverse items-center gap-10
             md:flex-row md:justify-between lg:px-20
             ">
-            <div className="max-w-[500px]">
-                <LazyReveal className="flex flex-col gap-5">
-                    <LazyReveal>
+            <div className="max-w-[500px] mb-10">
+                <LazyReveal triggerOnce={true} className="flex flex-col gap-5">
+                    <LazyReveal  triggerOnce={true}>
                         <h1 className="text-5xl font-bold">Hai! Saya Seorang</h1>
                         <h1 className="text-5xl font-bold"><TypingAnimate kalimat={['Website Developer', 'Asisten Praktikum Lab RPL', 'Pengurus Divisi Syiar UKM-KI Al-Azhar']} /></h1>
                     </LazyReveal>

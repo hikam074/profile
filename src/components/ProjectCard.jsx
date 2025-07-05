@@ -19,7 +19,7 @@ export default function ProjectCard({ title, description, year, image, technolog
             >
             <div className='flex flex-col gap-2'>
                 {image && (
-                <HoverZoomImage src={image} alt={title}
+                <HoverZoomImage src={image} alt={title} loading="lazy"
                     className="h-48 p-1 border border-dashed border-tersier"
                 />)}
                 <div className='flex flex-col gap-2'>
@@ -46,6 +46,7 @@ export default function ProjectCard({ title, description, year, image, technolog
                                 src={techBadges[tech] || techBadges.default}
                                 className="inline-block h-5"
                                 title={tech}
+                                loading="lazy"
                             />))}
                         </div>)}
                     </div>
