@@ -5,7 +5,7 @@ import '/src/styles/index.css';
 import PageTransitionWrap from "./components/utils/PageTransitionWrapper.jsx";
 import Footer from "./components/Footer.jsx";
 import { Suspense, lazy } from "react";
-
+import ScrollToTopButton from "./components/ScrollToTopBtn.jsx";
 
 const Home = lazy(() => import('./pages/Home.jsx'));
 const Portfolio = lazy(() => import('./pages/Portfolio.jsx'));
@@ -54,6 +54,7 @@ function App() {
           />
         </Routes>
       </AnimatePresence>
+      <ScrollToTopButton />
       <Footer />
     </>
   )

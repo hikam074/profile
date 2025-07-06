@@ -11,6 +11,7 @@ import { useSmartScroll } from '../components/utils/ScrollTo';
 import SkillCard from '../components/home/SkillCard';
 import skills from '../data/skills';
 import skillsPropImg from '/prop-skills.png';
+import TimelineExperiences from '../components/home/TimelineExperiences';
 
 
 export default function Home() {
@@ -62,7 +63,11 @@ export default function Home() {
             </section>
         </LazyReveal>
 
-        <div>---EXPERIENCE---</div>
+        <LazyReveal asChild triggerOnce={true}>
+            <section id='experiences'>
+                <TimelineExperiences />
+            </section>
+        </LazyReveal>
 
         <div>---CERTIFICATE---</div>
 

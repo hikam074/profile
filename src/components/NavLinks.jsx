@@ -17,7 +17,7 @@ export default function NavLinks({
     <li key={r.to} className="relative flex">
       <NavLink to={r.to} end={r.to === '/'} onClick={() => onLinkClick?.()}
         className={({ isActive }) =>
-          `px-4 py-2 font-bold transition ${
+          `px-4 py-2 font-bold transition border-b-2 border-transparent ${
             (isActive || location.hash === r.to.split('#')[1])
               ? 'text-primer'
               : 'text-sekunder hover:text-primer hover:border-b-2 hover:border-primer'
@@ -30,7 +30,7 @@ export default function NavLinks({
             className={
               isMobile
                 ? 'absolute left-0 top-0 h-full w-1 bg-primer rounded-r'
-                : 'absolute left-0 -bottom-2 h-0.5 w-full bg-primer'
+                : 'absolute left-0 bottom-0 h-0.5 w-full bg-primer'
             }
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           />

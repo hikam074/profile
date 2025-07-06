@@ -9,6 +9,7 @@ export default function Navbar() {
     { name: 'Beranda', to: '/' },
     { name: 'Portfolio', to: '/portfolio' },
     { name: 'Skills', to: '/#skills' },
+    { name: 'Pengalaman', to: '/#experiences'},
     { name: 'Kontak', to: '/contact' },
   ];
 
@@ -41,7 +42,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-6 p-4 relative">
+        <ul className="hidden md:flex gap-6 px-4 relative">
           <NavLinks routes={routes} />
         </ul>
 
@@ -60,9 +61,7 @@ export default function Navbar() {
                 transition={{ duration: 0.3 }}
                 className="absolute right-1 top-full mt-2 bg-white z-50 shadow border rounded p-4"
               >
-                {/* <LazyReveal direction="right" duration={0.5} stagger={0.3} asChild={true} className=""> */}
-                  <NavLinks routes={routes} isMobile useLazyReveal onLinkClick={() => setToggle(false)} />
-                {/* </LazyReveal> */}
+                <NavLinks routes={routes} isMobile useLazyReveal onLinkClick={() => setToggle(false)} />
               </motion.ul>
             )}
           </AnimatePresence>

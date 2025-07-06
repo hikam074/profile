@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 export function scrollToId(id, options = { behavior: 'smooth', block: 'start'}) {
@@ -17,13 +17,28 @@ export function scrollToRef(ref, options = {behavior: 'smooth', block: 'start'})
 
 export function useSmartScroll(options = { behavior: 'smooth', block: 'start' }) {
     const { pathname, hash } = useLocation();
+    const prevPathname = useRef(null);
+    const prevHash = useRef(hash);
+    const isHasScrolled = useRef(false);
+    const optionRef = useRef(options);
 
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'auto' });
-        if (hash) {
+        const isPathChanged = prevPathname.current !== pathname;
+        const isHashChanged = prevHash.current !== hash;
+        
+        if (isPathChanged || isHashChanged) {
+            isHasScrolled.current = false;
+            prevPathname.current = pathname;
+            prevHash.current = hash;
+        }
+
+        if (isPathChanged) window.scrollTo({ top: 0, behavior: "auto" });
+
+        if (hash  && !isHasScrolled.current) {
             const delay = setTimeout(() => {
-                scrollToId(hash, options)
-            }, 500);
+                scrollToId(hash, optionRef.current)
+                isHasScrolled.current = true;
+            }, 300);
             return () =>clearTimeout(delay);
         }
     }, [pathname, hash]);
