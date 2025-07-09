@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <div className="w-full mt-5 p-6 border-t text-sm space-y-10 font-light flex flex-col justify-between items-center
+        <div className="w-full mt-5 p-6 border-t text-sm gap-10 font-light flex flex-col justify-between items-center
             md:px-20 sm:flex-row">
             <span>© Copyright Mohammad Al Hikam [2025]. All Rights Reserved</span>
             <div className="flex gap-5 items-center">
