@@ -10,7 +10,7 @@ export default function Navbar() {
     { name: 'Portfolio', to: '/portfolio' },
     { name: 'Skills', to: '/#skills' },
     { name: 'Pengalaman', to: '/#experiences'},
-    { name: 'Kontak', to: '/contact' },
+    { name: 'Kontak', to: '/#contact' },
   ];
 
   const [isToggled, setToggle] = useState(false);

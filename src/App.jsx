@@ -9,7 +9,6 @@ import ScrollToTopButton from "./components/ScrollToTopBtn.jsx";
 
 const Home = lazy(() => import('./pages/Home.jsx'));
 const Portfolio = lazy(() => import('./pages/Portfolio.jsx'));
-const Contact = lazy(() => import('./pages/Contact.jsx'));
 
 
 function LoadingPage() {
@@ -40,14 +39,6 @@ function App() {
             <Suspense fallback={<LoadingPage />}>
               <PageTransitionWrap bg="#BEE0C7">
                 <Portfolio />
-              </PageTransitionWrap>
-            </Suspense>
-            }
-          />
-          <Route path="/contact" element={
-            <Suspense fallback={<LoadingPage />}>
-              <PageTransitionWrap bg="#CEEDB2">
-                <Contact />
               </PageTransitionWrap>
             </Suspense>
             }

@@ -12,6 +12,7 @@ import SkillCard from '../components/home/SkillCard';
 import skills from '../data/skills';
 import skillsPropImg from '/prop-skills.png';
 import TimelineExperiences from '../components/home/TimelineExperiences';
+import FormContact from '../components/ContactForm';
 
 
 export default function Home() {
@@ -77,6 +78,13 @@ export default function Home() {
                 <RecentRepos username="hikam074" count={3} />
             </div>
         </LazyReveal>
+
+        <LazyReveal triggerOnce={true}>
+            <section id='contact' className='bg-white rounded shadow p-6 border-l-[4px] border-primer'>
+                <FormContact/>
+            </section>
+        </LazyReveal>
+
     </section>
   );
 }
