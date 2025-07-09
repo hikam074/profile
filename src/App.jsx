@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Navbar from './components/Navbar.jsx';
 import { AnimatePresence } from "framer-motion";
 import '/src/styles/index.css';
@@ -43,6 +43,7 @@ function App() {
             </Suspense>
             }
           />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AnimatePresence>
       <ScrollToTopButton />
