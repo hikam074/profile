@@ -13,7 +13,7 @@ export default function TitleHome() {
                 <LazyReveal triggerOnce={true} className="flex flex-col gap-5">
                     <LazyReveal  triggerOnce={true}>
                         <h1 className="text-5xl font-bold">Hai! Saya Seorang</h1>
-                        <h1 className="text-5xl font-bold"><TypingAnimate kalimat={['Website Developer', 'Asisten Praktikum Lab RPL', 'Pengurus Divisi Syiar UKM-KI Al-Azhar']} /></h1>
+                        <h1 className="text-5xl font-bold"><TypingAnimate kalimat={['Asisten Praktikum Lab RPL', 'Website Developer', 'Pengurus Divisi Syiar UKM-KI Al-Azhar']} /></h1>
                     </LazyReveal>
                     <span className="font-light">Hai! Nama saya Mohammad Al Hikam, atau panggil saja Hikam 👋 Mahasiswa jurusan <a href="https://ilkom.unej.ac.id/sistem-informasi/" target="_blank" className="text-sekunder">Sistem Informasi</a> yang memiliki minat dan kemampuan di bidang perencanaan hingga pengembangan website</span>
                     <div className="flex gap-4">
