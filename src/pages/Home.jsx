@@ -1,7 +1,7 @@
-import ProjectCard from '../components/ProjectCard';
-import projects from '../data/projects';
-import TitleHome from '../components/home/TitleHome';
 import { Link } from 'react-router-dom';
+
+import ProjectCard from '../components/ProjectCard';
+import TitleHome from '../components/home/TitleHome';
 import GithubCalendarSection from '../components/home/GithubCalendarSection';
 import RecentRepos from '../components/home/RecentRepos';
 import GridReveal from '../components/utils/GridReveal';
@@ -9,10 +9,15 @@ import LazyReveal from '../components/utils/LazyReveal';
 import useDynamicBgScroll from '../components/utils/UseDynamicBgScroll';
 import { useSmartScroll } from '../components/utils/ScrollTo';
 import SkillCard from '../components/home/SkillCard';
-import skills from '../data/skills';
-import skillsPropImg from '/prop-skills.png';
 import TimelineExperiences from '../components/home/TimelineExperiences';
 import FormContact from '../components/ContactForm';
+import Certification from '../components/home/Certification';
+
+import projects from '../data/projects';
+import skills from '../data/skills';
+import certificates from '../data/certificates';
+
+import skillsPropImg from '/prop-skills.png';
 
 
 export default function Home() {
@@ -28,7 +33,7 @@ export default function Home() {
         <LazyReveal direction='up' triggerOnce={true}>
             <section id='projek' className='p-6 border shadow-xl rounded bg-white'>
                 <div className='flex justify-between mx-6 gap-6 items-center'>
-                    <h3 className="text-4xl font-bold mb-6">Some of My Portfolio</h3>
+                    <h3 className="text-4xl font-bold mb-6">Some of My Portofolio</h3>
                     <Link to="/portfolio" className="inline-block text-blue-600 text-right text-sm hover:underline" > Lihat Semua Proyek → </Link>
                 </div>
                 <GridReveal direction="left" duration={0.6} stagger={0.2} sequential="false" className="" rowGap="gap-6"
@@ -70,7 +75,18 @@ export default function Home() {
             </section>
         </LazyReveal>
 
-        <div>---CERTIFICATE---</div>
+        <LazyReveal asChild triggerOnce={true}>
+            <section className='flex flex-col justify-center space-y-10 items-center'>
+                <h3 className="font-bold text-4xl">Sertifikasi</h3>
+                <LazyReveal asChild duration={0.8} triggerOnce={true}>
+                    <div className='flex flex-row gap-5 flex-wrap justify-center'>
+                        {certificates.map((certificate, index) => (
+                            <Certification key={index} {...certificate} />
+                        ))}
+                    </div>
+                </LazyReveal>
+            </section>
+        </LazyReveal>
 
         <LazyReveal direction='up' triggerOnce={true}>
             <div className='bg-white p-6 rounded shadow-lg border flex flex-col gap-8 lg:flex-row'> 
