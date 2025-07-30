@@ -21,6 +21,7 @@ Ini adalah source code untuk website profil pribadi saya. Website ini menampilka
 # Clone repositori
 git clone https://github.com/username/nama-repo.git
 cd nama-repo
+```
 
 ```bash
 npm install
