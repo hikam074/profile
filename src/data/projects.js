@@ -9,8 +9,18 @@ import imgIgAthema from '../assets/portos/porto-ig_athema.png';
 import imgIgPasisma from '../assets/portos/porto-ig_pasisma.png';
 import imgYtPasisma from '../assets/portos/porto-yt_pasisma.png';
 import imgYtAlazhar from '../assets/portos/porto-yt_alazhar.png';
+import imgRaisa from '../assets/portos/porto-raisa.png';
 
 const projects = [
+    {
+        title: "Sekolah Kopi Raisa : Aplikasi Website Untuk Pengajuan Kegiatan dan Laporan P4S",
+        description: "Backend aplikasi e-commerce dan pelayanan kegiatan Sekolah Kopi Raisa Bondowoso. Berisi toko online produk kopi, manajemen pengajuan lauanan/kegiatan hingga laporan keuangan",
+        year: "2025-2026",
+        image: imgRaisa,
+        technologies: ["JS","Express", "Prisma", "Cloudinary", "Swagger", "Joi", "Jest", "Supertest", "Nodemailer"],
+        category: "Web Backend",
+        link: "https://github.com/contactsekolahkopiraisa-dev/BE-Web-SekolahKopiRaisa",
+    },
     {
         title: "Nauture : Sistem Informasi Pelelangan Hasil Panen",
         description: "Aplikasi lelang hasil pertanian berbasis website. Lengkap dengan mekanisme lelang, manajemen serta laporan hingga keuangan",

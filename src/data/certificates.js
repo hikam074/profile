@@ -1,7 +1,16 @@
 import ctfDicodingPy from '../assets/certificates/2023-12 DICODING BASIC PYTHON.jpg';
 import ctfUKBI from '../assets/certificates/Uji UKBI.jpg';
+import ctfDicodingWeb from '../assets/certificates/2025-11 PWEB.jpg';
 
 const certificates = [
+    {
+        title: "Belajar Dasar Pemrograman Web",
+        issuer: "Dicoding Indonesia",
+        description: "Kelas sertifikasi pemrograman dasar berbasis website : HTML, CSS, JS",
+        year: "2025-2028",
+        image: ctfDicodingWeb,
+        link: "https://www.dicoding.com/certificates/JLX154WQNZ72",
+    },
     {
         title: "Memulai Pemrograman dengan Python",
         issuer: "Dicoding Indonesia",

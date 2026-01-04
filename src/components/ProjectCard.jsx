@@ -10,6 +10,7 @@ export default function ProjectCard({ title, description, year, image, technolog
         "Desktop App": "bg-purple-200",
         "Web Fullstack": "bg-blue-200",
         "Web Frontend": "bg-green-200",
+        "Web Backend": "bg-black text-white",
         default: "bg-white"
         };
 
