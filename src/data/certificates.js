@@ -1,8 +1,17 @@
 import ctfDicodingPy from '../assets/certificates/2023-12 DICODING BASIC PYTHON.jpg';
 import ctfUKBI from '../assets/certificates/Uji UKBI.jpg';
 import ctfDicodingWeb from '../assets/certificates/2025-11 PWEB.jpg';
+import ctfWebBNSP from '../assets/certificates/2025-11 Junior Web Dev BNSP.jpeg';
 
 const certificates = [
+    {
+        title: "Junior Web Developer",
+        issuer: "BNSP",
+        description: "Sertifikasi Pengembang Web Pratama (Junior Web Developer) : HTML, CSS, JS, PHP (No. Sertifikat: 02278, sertifikat asli dalam proses)",
+        year: "2025-2028",
+        image: ctfWebBNSP,
+        link: "https://www.inixindo.id/my-account/verifikasi-sertifikat",
+    },
     {
         title: "Belajar Dasar Pemrograman Web",
         issuer: "Dicoding Indonesia",
