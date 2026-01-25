@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <div className="w-full mt-5 p-6 border-t text-sm gap-10 font-light flex flex-col justify-between items-center
             md:px-20 sm:flex-row">
-            <span>© Copyright Mohammad Al Hikam [2025]. All Rights Reserved</span>
+            <span>© Copyright Mohammad Al Hikam [2026]. All Rights Reserved</span>
             <div className="flex gap-5 items-center">
                 <p className="font-light">Dibangun dengan React</p>
                 <svg width="40px" height="40px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

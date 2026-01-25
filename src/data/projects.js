@@ -10,6 +10,7 @@ import imgIgPasisma from '../assets/portos/porto-ig_pasisma.png';
 import imgYtPasisma from '../assets/portos/porto-yt_pasisma.png';
 import imgYtAlazhar from '../assets/portos/porto-yt_alazhar.png';
 import imgRaisa from '../assets/portos/porto-raisa.png';
+import imgONF from '../assets/portos/porto-orenoframe.png';
 
 const projects = [
     {
@@ -17,16 +18,25 @@ const projects = [
         description: "Backend aplikasi e-commerce dan pelayanan kegiatan Sekolah Kopi Raisa Bondowoso. Berisi toko online produk kopi, manajemen pengajuan lauanan/kegiatan hingga laporan keuangan",
         year: "2025-2026",
         image: imgRaisa,
-        technologies: ["JS","Express", "Prisma", "Cloudinary", "Swagger", "Joi", "Jest", "Supertest", "Nodemailer"],
+        technologies: ["JS", "NodeJS", "Express", "Prisma", "Supabase", "Cloudinary", "Swagger", "Joi", "Jest", "Supertest", "Nodemailer"],
         category: "Web Backend",
         link: "https://github.com/contactsekolahkopiraisa-dev/BE-Web-SekolahKopiRaisa",
     },
     {
+        title: "俺のフレーム (Ore no Frame) : Aplikasi Website Blog Anime Review",
+        description: "Website Blog & Aplikasi CMS (Content Management System) review & resensi anime & budaya jejepangan. Berisi review pengguna untuk anime dan Content Management System dengan pemanfaatan format markdown untuk pembuatan review, mendukung layout responsif baik di mobile maupun desktop",
+        year: "2026",
+        image: imgONF,
+        technologies: ["TS", "NextJS", "TailwindCSS", "React", "Supabase", "Markdown"],
+        category: "Web Fullstack",
+        link: "https://github.com/hikam074/ore-no-frame",
+    },
+    {
         title: "Nauture : Sistem Informasi Pelelangan Hasil Panen",
-        description: "Aplikasi lelang hasil pertanian berbasis website. Lengkap dengan mekanisme lelang, manajemen serta laporan hingga keuangan",
+        description: "Aplikasi lelang hasil pertanian berbasis website. Lengkap dengan mekanisme lelang, manajemen serta laporan hingga keuangan, mendukung layoput responsif baik di mobile maupun desktop",
         year: "2025",
         image: imgNauture,
-        technologies: ["Laravel", "PHP", "HTML", "CSS", "JS", "TailwindCSS", "Vite", "SweetAlert2", "Toastr", "ChartJS", "AnimeJS", "Midtrans", "RajaOngkir", "Onesignal", "Fonnte", "DomPDF"],
+        technologies: ["Laravel", "PHP", "HTML", "CSS", "JS", "NodeJS", "TailwindCSS", "Vite", "SweetAlert2", "Toastr", "ChartJS", "AnimeJS", "Midtrans", "RajaOngkir", "Onesignal", "Fonnte", "DomPDF"],
         category: "Web Fullstack",
         link: "https://github.com/hikam074/nauture",
     },
@@ -44,7 +54,7 @@ const projects = [
         description: "Website statis profil saya. Berisi berbagai proyek, karya dan informasi mengenai saya",
         year: "2025",
         image: imgWebProfil,
-        technologies: ["React", "CSS", "JS", "TailwindCSS", "Vite"],
+        technologies: ["React", "CSS", "JS", "NodeJS", "TailwindCSS", "Vite"],
         category: "Web Frontend",
         link: "https://hikam-profile.vercel.app/",
     },
@@ -53,7 +63,7 @@ const projects = [
         description: "Aplikasi web untuk manajemen toko dan stok dengan sistem FIFO. Termasuk grafik penjualan, rangkuman toko, pengelolaan stok, dan ekspor laporan ke PDF dengan sekali klik.",
         year: "2025",
         image: imgWebProfil,
-        technologies: ["HTML", "CSS", "JS", "TailwindCSS", "Vite", "ChartJS", "DomPDF"],
+        technologies: ["HTML", "CSS", "JS", "NodeJS", "TailwindCSS", "Vite", "ChartJS", "DomPDF", "Supabase"],
         category: "Web Fullstack",
         link: "https://github.com/ChieJuwonsFx/Belajar-PWEB",
     },    
