@@ -1,35 +1,46 @@
-import imgNauture from '../assets/portos/porto-nauture.png';
-import imgAthemasmasa from '../assets/portos/porto-athemasmasa.png';
-import imgBarbermate from '../assets/portos/porto-barbermate.png';
-import imgWebProfil from '../assets/portos/porto-profil.png';
-import imgSatset from '../assets/portos/porto-satset.png';
-import imgUpsence1 from '../assets/portos/porto-upsence1.png';
-import imgUpsence2 from '../assets/portos/porto-upsence2.png';
-import imgIgAthema from '../assets/portos/porto-ig_athema.png';
-import imgIgPasisma from '../assets/portos/porto-ig_pasisma.png';
 import imgYtPasisma from '../assets/portos/porto-yt_pasisma.png';
 import imgYtAlazhar from '../assets/portos/porto-yt_alazhar.png';
-import imgRaisa from '../assets/portos/porto-raisa.png';
-import imgONF from '../assets/portos/porto-orenoframe.png';
+import imgIgPasisma from '../assets/portos/porto-ig_pasisma.png';
+import imgIgAthema from '../assets/portos/porto-ig_athema.png';
+import imgUpsence1 from '../assets/portos/porto-upsence1.png';
+import imgUpsence2 from '../assets/portos/porto-upsence2.png';
+import imgSatset from '../assets/portos/porto-satset.png';
+import imgBarbermate from '../assets/portos/porto-barbermate.png';
+import imgInnoVixus from '../assets/portos/porto-innovixus.png';
+import imgWebProfil from '../assets/portos/porto-profil.png';
+import imgAthemasmasa from '../assets/portos/porto-athemasmasa.png';
+import imgNauture from '../assets/portos/porto-nauture.png';
+import imgRaisa from '../assets/portos/porto-sekolahkopiraisa.png';
+import imgSf from '../assets/portos/porto-sisiframe.png';
+import imgSti from '../assets/portos/porto-sti.png';
 
 const projects = [
+    {
+        title: "ERP SchoolTech Indonesia : SaaS Untuk Manajemen pendidikan",
+        description: "Aplikasi berbasis website untuk manajemen pendidikan. Dari LMS (Learning Management System), BKSIGAP (Manajemen Bimbingan Konseling), Hingga Tes Kepribadian MBTI dan DISC",
+        year: "2026",
+        image: imgSti,
+        technologies: ["VueJS", "PrimeFlex", "JS", "Golang", "Gin", "GORM", "GithubActions", "Github", "Git", "COS", "Swagger"],
+        category: "Web Fullstack",
+        link: "https://sekolahkopiraisa.com",
+    },
+    {
+        title: "SisiFrame : Aplikasi Website Blog Artikel & Review Anime",
+        description: "Website Blog & Aplikasi CMS (Content Management System) untuk esai review, pembahasan atau blog anime, manga & budaya jejepangan. Berisi kumpulan artikel & review dengan konsep WYSIWYG, mendukung layout responsif baik di mobile maupun desktop",
+        year: "2026",
+        image: imgSf,
+        technologies: ["TS", "NextJS", "TailwindCSS", "React", "MAL", "Supabase", "Vercel"],
+        category: "Web Fullstack",
+        link: "https://sisiframe.malhikam.my.id",
+    },
     {
         title: "Sekolah Kopi Raisa : Aplikasi Website Untuk Pengajuan Kegiatan dan Laporan P4S",
         description: "Backend aplikasi e-commerce dan pelayanan kegiatan Sekolah Kopi Raisa Bondowoso. Berisi toko online produk kopi, manajemen pengajuan lauanan/kegiatan hingga laporan keuangan",
         year: "2025-2026",
         image: imgRaisa,
-        technologies: ["JS", "NodeJS", "Express", "Prisma", "Supabase", "Cloudinary", "Swagger", "Joi", "Jest", "Supertest", "Nodemailer"],
+        technologies: ["JS", "NodeJS", "Express", "Prisma", "Supabase", "Cloudinary", "Swagger", "Joi", "Jest", "Supertest", "Nodemailer", "Vercel"],
         category: "Web Backend",
-        link: "https://github.com/contactsekolahkopiraisa-dev/BE-Web-SekolahKopiRaisa",
-    },
-    {
-        title: "俺のフレーム (Ore no Frame) : Aplikasi Website Blog Anime Review",
-        description: "Website Blog & Aplikasi CMS (Content Management System) review & resensi anime & budaya jejepangan. Berisi review pengguna untuk anime dan Content Management System dengan pemanfaatan format markdown untuk pembuatan review, mendukung layout responsif baik di mobile maupun desktop",
-        year: "2026",
-        image: imgONF,
-        technologies: ["TS", "NextJS", "TailwindCSS", "React", "Supabase", "Markdown"],
-        category: "Web Fullstack",
-        link: "https://github.com/hikam074/ore-no-frame",
+        link: "https://sekolahkopiraisa.com",
     },
     {
         title: "Nauture : Sistem Informasi Pelelangan Hasil Panen",
@@ -54,7 +65,7 @@ const projects = [
         description: "Website statis profil saya. Berisi berbagai proyek, karya dan informasi mengenai saya",
         year: "2025",
         image: imgWebProfil,
-        technologies: ["React", "CSS", "JS", "NodeJS", "TailwindCSS", "Vite"],
+        technologies: ["React", "CSS", "JS", "NodeJS", "TailwindCSS", "Vite", "Vercel"],
         category: "Web Frontend",
         link: "https://hikam-profile.vercel.app/",
     },
@@ -62,7 +73,7 @@ const projects = [
         title: "InnoVixus : Sistem Informasi Manajemen Stok Toko Berbasis FIFO (first-in-first-out)",
         description: "Aplikasi web untuk manajemen toko dan stok dengan sistem FIFO. Termasuk grafik penjualan, rangkuman toko, pengelolaan stok, dan ekspor laporan ke PDF dengan sekali klik.",
         year: "2025",
-        image: imgWebProfil,
+        image: imgInnoVixus,
         technologies: ["HTML", "CSS", "JS", "NodeJS", "TailwindCSS", "Vite", "ChartJS", "DomPDF", "Supabase"],
         category: "Web Fullstack",
         link: "https://github.com/ChieJuwonsFx/Belajar-PWEB",

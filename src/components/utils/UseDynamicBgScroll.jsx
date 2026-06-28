@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { observe } from "react-intersection-observer";
 
 export default function useDynamicBgScroll({ colorIn, colorOut, threshold} = {} ) {
     const observeRef = useRef(null);

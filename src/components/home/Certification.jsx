@@ -1,8 +1,7 @@
 
 export default function Certification( {title, issuer, description, year, image, link} ) {
     return (
-        <div className="p-4 flex-col bg-white rounded shadow w-full
-            sm:w-[45%]"
+        <div className="p-4 bg-white rounded shadow w-full"
             >
             <h5 className="font-bold text-lg ">{title}</h5>
             <h6 className="font-extralight text-sm">

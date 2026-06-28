@@ -5,6 +5,14 @@ import { PiFileSql } from "react-icons/pi"; // <PiFileSql />
 
 const pengalaman = [
     {
+      title: "Full-stack Developer",
+      subtitle: "Schooltech Indonesia",
+      date: "Februari 2026 - Juni 2026",
+      deskripsi: "Membangun aplikasi ERP berbasis website untuk manajemen pendidikan : LMS (Learning Management System), BKSIGAP (Manajemen Bimbingan Konseling), Hingga Tes Kepribadian MBTI dan DISC",
+      icon: <FaCode />,
+      backgroundColor: "#2196f3"
+    },
+    {
       title: "Back-end Developer",
       subtitle: "Sekolah Kopi RAISA Bondowoso",
       date: "Agustus 2025 - Januari 2026",
@@ -16,7 +24,7 @@ const pengalaman = [
       title: "Asisten Praktikum Tetap",
       subtitle: "Laboratorium Rekayasa Perangkat Lunak UNEJ",
       date: "Juli 2025 - ongoing",
-      deskripsi: "Mengajar 80+ mahasiswa mata kuliah Sistem Basis Data dan Pemrograman SQL dengan pendekatan praktis, menyediakan modul dan asistensi, serta mengelola evaluasi hingga capaian nilai rata-rata 84,5.",
+      deskripsi: "Mengajar 200+ mahasiswa mata kuliah Sistem Basis Data, Pemrograman SQL, Manajemen Proyek TI dan Software Construction, menyediakan modul dan asistensi, serta mengelola evaluasi hingga capaian nilai rata-rata 84,1.",
       icon: <FaChalkboardTeacher />,
       backgroundColor: "#054783"
     },

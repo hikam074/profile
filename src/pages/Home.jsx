@@ -79,7 +79,7 @@ export default function Home() {
             <section className='flex flex-col justify-center space-y-10 items-center'>
                 <h3 className="font-bold text-4xl">Sertifikasi</h3>
                 <LazyReveal asChild duration={0.8} triggerOnce={true}>
-                    <div className='flex flex-row gap-5 flex-wrap justify-center'>
+                    <div className='grid grid-cols gap-5 justify-center sm:grid-cols-2'>
                         {certificates.map((certificate, index) => (
                             <Certification key={index} {...certificate} />
                         ))}
@@ -89,9 +89,9 @@ export default function Home() {
         </LazyReveal>
 
         <LazyReveal direction='up' triggerOnce={true}>
-            <div className='bg-white p-6 rounded shadow-lg border flex flex-col gap-8 lg:flex-row'> 
+            <div className='h-full w-full bg-white p-6 rounded shadow-lg border grid grid-cols-1 gap-8 lg:grid-cols-2'> 
                 <GithubCalendarSection />
-                <RecentRepos username="hikam074" count={3} />
+                <RecentRepos count={3} />
             </div>
         </LazyReveal>
 
